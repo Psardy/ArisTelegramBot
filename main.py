@@ -71,11 +71,11 @@ async def gpt_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(response)
 
 # ==== MAIN ====
-async def main():
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
-    app.add_handler(CommandHandler("gpt", gpt_handler))
-    print("✅ Арис-бот запущен")
-    await app.run_polling()
+from telegram.ext import ApplicationBuilder, CommandHandler
 
-if __name__ == '__main__':
-    asyncio.run(main())
+app = ApplicationBuilder().token(BOT_TOKEN).build()
+app.add_handler(CommandHandler("gpt", gpt_handler))
+
+print("✅ Арис-бот запущен")
+app.run_polling()
+
