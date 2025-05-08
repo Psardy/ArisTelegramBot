@@ -1,1 +1,1 @@
-worker: bash -c "npx playwright install-deps && playwright install && python3 main.py"
+worker: bash -c "playwright install-deps && playwright install && python3 main.py"
