@@ -1,0 +1,1 @@
+worker: bash -c "playwright install && python3 main.py"
