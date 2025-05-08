@@ -5,7 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from playwright.async_api import async_playwright
 
 # ==== CONFIGURATION ====
-BOT_TOKEN = os.getenv("8034649101:AAGXwe0c81L8H4wFc4rKilhcOU8EYrEOgpY")  # Добавь токен как переменную окружения
+BOT_TOKEN = os.getenv("BOT_TOKEN") # Добавь токен как переменную окружения
 
 # ==== ChatGPT Web Handler ====
 async def ask_chatgpt(prompt: str) -> str:
