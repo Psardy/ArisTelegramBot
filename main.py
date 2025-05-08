@@ -22,26 +22,7 @@ async def ask_chatgpt(prompt: str) -> str:
                 "httpOnly": True,
                 "secure": True,
                 "sameSite": "Lax"
-            },
-            {
-                        "name": "__Host-next-auth.csrf-token",
-                        "value":
-                        "7091b3949b774d39f08fd1cc44a0a2b74132760b784d2ce3c44c2ab57e73686c%7C393673e50e299174807341a5f12c6c23ead2d4d0a63caa880da6112f94c83e7d",
-                        "domain": "chat.openai.com",
-                        "path": "/",
-                        "httpOnly": True,
-                        "secure": True,
-                        "sameSite": "Lax"
-                    }, {
-                        "name": "cf_clearance",
-                        "value":
-                        "X61BIr0yrmVdZ65FmdLGVIl1ySRICJ_YT9zLwPFUOuo-1746697721-1.2.1.1-lFPDHKRaKdR0M3gKNkYYT5Fk4iwRyGUeJcz65MLHbPqCqW8kaVUbrF0b5Ldv8XeSrHfNaNFeCmoEk_8V0pC6f58o_YsSbOnu4TmZ5XxQv8sA4xB_8uNyBVa.f2TxBTav5vOe6j2drj6ae0tiupqbvb7YL.jaf1X6qdTLGgTwUHkIURgIyph.V3ruc1I7iOH.LindREswOQd3ihcO6nLN9aPW4588MRR8d.bA0LhkZlQ2n.V.xFm7.IYPcLQ47JYx08.drX4ivKlh2XTx7xMoZi4zoulFIqrRsc9jq2aOROlR2RLN4hZhQVJiLcPEob3Dbkp6h_lMndVn1RzBpW.ey97Yc3SPFaC7PJqxtTWY854",
-                        "domain": "chat.openai.com",
-                        "path": "/",
-                        "httpOnly": False,
-                        "secure": True,
-                        "sameSite": "Lax"
-                    }
+            }
         ])
 
         page = await context.new_page()
