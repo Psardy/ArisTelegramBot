@@ -28,6 +28,10 @@ async def ask_chatgpt(prompt: str) -> str:
         page = await context.new_page()
         await page.goto("https://chat.openai.com/")
 
+        print("🟡 Открыл страницу ChatGPT, жду textarea...")
+        content = await page.content()
+        print("🔍 Первые 1000 символов страницы:\n", content[:1000])
+
         await page.wait_for_selector('textarea')
         await page.fill('textarea', prompt)
         await page.press('textarea', 'Enter')
